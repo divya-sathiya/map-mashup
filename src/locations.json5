@@ -1,0 +1,31 @@
+// locations.json5
+[
+  {
+    title: "Statue of Liberty",
+    latlng: {
+      lat: 40.689247,
+      lng: -74.044502,
+    },
+  },
+  {
+    title: "Ellis Island",
+    latlng: {
+      lat: 40.6997222,
+      lng: -74.0394444,
+    },
+  },
+  {
+    title: "Governors Island, NY",
+    latlng: {
+      lat: 40.6889918,
+      lng: -74.0190287,
+    },
+  },
+  {
+    title: "The Battery, NY",
+    latlng: {
+      lat: 40.703027130688554,
+      lng: -74.0159352269849,
+    },
+  },
+]
