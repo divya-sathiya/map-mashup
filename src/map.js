@@ -5,11 +5,12 @@ import { Loader } from '@googlemaps/js-api-loader';
  https://developers.google.com/maps/documentation/javascript/examples/programmatic-load-button#maps_programmatic_load_button-javascript 
  */
 
-const mapInit = (apiKey, styles, locations) => {
+const mapInit = (apiKey, locations) => {
   let map;
   // const center = { lat: 41.90476224706472, lng: 12.49822074385094 };
   const center = { lat: 38.747935611941074, lng: -98.54793617885777 };
   const zoom = 4;
+  const mapID = 'a6ea77d474c830a3'; 
 
   const loader = new Loader({
     apiKey: apiKey,
@@ -36,7 +37,8 @@ const mapInit = (apiKey, styles, locations) => {
         center: center,
         zoom: zoom,
         // put additional options here
-        styles: styles, 
+        //styles: styles, 
+        mapId: mapID,
       };
 
       map = new google.maps.Map(document.getElementById('map'), mapOptions);
