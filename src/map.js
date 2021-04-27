@@ -8,8 +8,8 @@ import { Loader } from '@googlemaps/js-api-loader';
 const mapInit = (apiKey, styles, locations) => {
   let map;
   // const center = { lat: 41.90476224706472, lng: 12.49822074385094 };
-  const center = locations[0].latlng;
-  const zoom = 14;
+  const center = { lat: 38.747935611941074, lng: -98.54793617885777 };
+  const zoom = 4;
 
   const loader = new Loader({
     apiKey: apiKey,
