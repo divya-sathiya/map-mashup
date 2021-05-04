@@ -5,26 +5,12 @@ import { Loader } from '@googlemaps/js-api-loader';
  https://developers.google.com/maps/documentation/javascript/examples/programmatic-load-button#maps_programmatic_load_button-javascript 
  */
 
-const apiQuery = async (id) => {
-  const venueDetails = await fetch('/.netlify/functions/fsq-venue', {
-    method: 'POST',
-    body: JSON.stringify({
-      query: id,
-    }),
-  })
-    .then((res) => res.json())
-    .catch((err) => console.error(err));
-
-  console.log(venueDetails.response.venue);
-  return venueDetails;
-};
-
 const mapInit = (apiKey, locations) => {
   let map;
   // const center = { lat: 41.90476224706472, lng: 12.49822074385094 };
   const center = { lat: 38.747935611941074, lng: -98.54793617885777 };
   const zoom = 4;
-  const mapID = 'a6ea77d474c830a3';
+  const mapID = 'a6ea77d474c830a3'; 
 
   const loader = new Loader({
     apiKey: apiKey,
@@ -51,7 +37,7 @@ const mapInit = (apiKey, locations) => {
         center: center,
         zoom: zoom,
         // put additional options here
-        //styles: styles,
+        //styles: styles, 
         mapId: mapID,
       };
 
@@ -60,30 +46,29 @@ const mapInit = (apiKey, locations) => {
       // Put additional map google code here
       // Put markers on the map and assign an infowindow to
       // each
-      const infowindow = new google.maps.InfoWindow({});
+      const infowindow = new google.maps.InfoWindow({
+      });
 
-      locations.forEach((location) => {
+      locations.forEach(location => {
         const marker = new google.maps.Marker({
           map,
           animation: google.maps.Animation.DROP,
           position: location.latlng,
         });
-        marker.addListener('click', toggleBounce);
+        marker.addListener("click", toggleBounce);
 
         function toggleBounce() {
           marker.setAnimation(google.maps.Animation.BOUNCE);
-          setTimeout(() => {
+          setTimeout(() => {  
             marker.setAnimation(null);
-          }, 3000);
+          }, 3000);  
         }
-
-        marker.addListener('click', () => {
+        
+        marker.addListener("click", () => {
           infowindow.setContent(location.title);
           infowindow.open(map, marker);
         });
-        const venueDetails = apiQuery(location.id);
-        console.log(venueDetails);
-      });
+      }); 
     });
   });
 };
