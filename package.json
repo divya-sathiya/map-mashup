@@ -8,7 +8,7 @@
     "dev": "webpack --mode development",
     "start": "webpack serve --mode development",
     "server": "node server.js",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production && cd functions && npm install && cd ..",
     "forNTL": "webpack --mode production --watch"
   },
   "keywords": [],

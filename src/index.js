@@ -15,7 +15,22 @@ const getApi = async () => {
     throw new Error(`HTTP error! status: ${res.status}`);
   }
   const API_KEY = await res.text();
-  mapInit(API_KEY, locations);
+
+  const venueDetails = await fetch('/.netlify/functions/fsq-venue', {
+    method: 'POST',
+    body: JSON.stringify({
+      locations: locations,
+    }),
+  })
+    .then((res) => res.json())
+    .catch((err) =>{
+      console.error('Error retreiving data from FourSquare')
+      console.error(err)
+    });
+
+    console.log({venueDetails});
+
+  mapInit(API_KEY, venueDetails);
 };
 
 getApi();
