@@ -1,4 +1,3 @@
-// locations.json5
 [
   {
     title: "Tidal Basin, Washingtion DC",
@@ -6,6 +5,43 @@
     latlng: {
       lat: 38.884581195498356,
       lng: -77.0383547106552,
+    },
+    contact: {},
+    location: {
+      address: "W Basin Dr SW",
+      crossStreet: "at Independence Ave SW",
+      lat: 38.884193,
+      lng: -77.039314,
+      labeledLatLngs: [
+        {
+          label: "display",
+          lat: 38.884193,
+          lng: -77.039314,
+        },
+      ],
+      cc: "US",
+      neighborhood: "Southwest Washington",
+      city: "Washington",
+      state: "D.C.",
+      country: "United States",
+      formattedAddress: [
+        "W Basin Dr SW (at Independence Ave SW)",
+        "Washington, D.C.",
+        "United States",
+      ],
+    },
+    bestPhoto: {
+      id: "51561755e4b0226aa8886d5f",
+      createdAt: 1364596565,
+      source: {
+        name: "Instagram",
+        url: "http://instagram.com",
+      },
+      prefix: "https://fastly.4sqi.net/img/general/",
+      suffix: "/19798064_j47ULCrxPOz2FqXwU70fMk3VD5JZutbdZcRnoS8tH6A.jpg",
+      width: 612,
+      height: 612,
+      visibility: "public",
     },
   },
   {
@@ -15,6 +51,72 @@
       lat: 38.611865967694534,
       lng: -90.25951391188192,
     },
+    contact: {
+      phone: "3145775100",
+      formattedPhone: "(314) 577-5100",
+      twitter: "mobotgarden",
+      facebook: "21472821133",
+      facebookUsername: "missouribotanicalgarden",
+      facebookName: "Missouri Botanical Garden",
+    },
+    location: {
+      address: "4344 Shaw Blvd",
+      lat: 38.61565555384747,
+      lng: -90.25807781185578,
+      labeledLatLngs: [
+        {
+          label: "display",
+          lat: 38.61565555384747,
+          lng: -90.25807781185578,
+        },
+      ],
+      postalCode: "63110",
+      cc: "US",
+      city: "St Louis",
+      state: "MO",
+      country: "United States",
+      formattedAddress: [
+        "4344 Shaw Blvd",
+        "St Louis, MO 63110",
+        "United States",
+      ],
+    },
+    bestPhoto: {
+      id: "4f491bb2e4b0a69abce9723e",
+      createdAt: 1330191282,
+      source: {
+        name: "Foursquare for Android",
+        url: "https://foursquare.com/download/#/android",
+      },
+      prefix: "https://fastly.4sqi.net/img/general/",
+      suffix: "/YM702nURDBNhnyZUJ9-vJWvM0t_E7XGELYnfOMzh0jo.jpg",
+      width: 720,
+      height: 431,
+      visibility: "public",
+    },
+    defaultHours: {
+      status: "Likely open",
+      richStatus: {
+        entities: [],
+        text: "Likely open",
+      },
+      isOpen: false,
+      isLocalHoliday: false,
+      timeframes: [
+        {
+          days: "Mon-Sun",
+          open: [
+            {
+              renderedTime: "9:00 AM–1:00 PM",
+            },
+            {
+              renderedTime: "5:00 PM–10:00 PM",
+            },
+          ],
+          segments: [],
+        },
+      ],
+    },
   },
   {
     title: "Fairmount Park, PA",
@@ -22,6 +124,66 @@
     latlng: {
       lat: 39.98836491550369,
       lng: -75.19711503558209,
+    },
+    contact: {},
+    location: {
+      address: "N Concourse St",
+      crossStreet: "at Belmont Ave",
+      lat: 39.98290282366481,
+      lng: -75.21118726039613,
+      labeledLatLngs: [
+        {
+          label: "display",
+          lat: 39.98290282366481,
+          lng: -75.21118726039613,
+        },
+      ],
+      postalCode: "19131",
+      cc: "US",
+      city: "Philadelphia",
+      state: "PA",
+      country: "United States",
+      formattedAddress: [
+        "N Concourse St (at Belmont Ave)",
+        "Philadelphia, PA 19131",
+        "United States",
+      ],
+    },
+    bestPhoto: {
+      id: "4eaadbb230f823f86e0c6de4",
+      createdAt: 1319820210,
+      source: {
+        name: "Foursquare for Android",
+        url: "https://foursquare.com/download/#/android",
+      },
+      prefix: "https://fastly.4sqi.net/img/general/",
+      suffix: "/DFXL4M1Q40HKGREFRAY0DPX1MKSSNV4CXEKUJYKVUOYDDTWD.jpg",
+      width: 720,
+      height: 431,
+      visibility: "public",
+    },
+    defaultHours: {
+      status: "Likely open",
+      richStatus: {
+        entities: [],
+        text: "Likely open",
+      },
+      isOpen: false,
+      isLocalHoliday: false,
+      timeframes: [
+        {
+          days: "Mon-Sun",
+          open: [
+            {
+              renderedTime: "8:00 AM–Noon",
+            },
+            {
+              renderedTime: "5:00 PM–7:00 PM",
+            },
+          ],
+          segments: [],
+        },
+      ],
     },
   },
   {
@@ -31,6 +193,66 @@
       lat: 40.76134892984473,
       lng: -74.1382849679126,
     },
+    contact: {
+      phone: "9732682300",
+      formattedPhone: "(973) 268-2300",
+      twitter: "essexparks",
+    },
+    location: {
+      address: "Branch Brook Park Dr",
+      lat: 40.77381437268857,
+      lng: -74.17543888092041,
+      labeledLatLngs: [
+        {
+          label: "display",
+          lat: 40.77381437268857,
+          lng: -74.17543888092041,
+        },
+      ],
+      postalCode: "07104",
+      cc: "US",
+      city: "Newark",
+      state: "NJ",
+      country: "United States",
+      formattedAddress: [
+        "Branch Brook Park Dr",
+        "Newark, NJ 07104",
+        "United States",
+      ],
+    },
+    bestPhoto: {
+      id: "4f56d8e4e4b0720e062c10fb",
+      createdAt: 1331091684,
+      source: {
+        name: "Foursquare for iOS",
+        url: "https://foursquare.com/download/#/iphone",
+      },
+      prefix: "https://fastly.4sqi.net/img/general/",
+      suffix: "/EhTcG3HY31dqmXiD91xvcR1B8VOPJPOuRShTNc9qtnE.jpg",
+      width: 537,
+      height: 720,
+      visibility: "public",
+    },
+    defaultHours: {
+      status: "Likely open",
+      richStatus: {
+        entities: [],
+        text: "Likely open",
+      },
+      isOpen: false,
+      isLocalHoliday: false,
+      timeframes: [
+        {
+          days: "Mon–Sun",
+          open: [
+            {
+              renderedTime: "8:00 AM–7:00 PM",
+            },
+          ],
+          segments: [],
+        },
+      ],
+    },
   },
   {
     title: "Descanso Gardens, CA",
@@ -38,6 +260,67 @@
     latlng: {
       lat: 34.20200414648512,
       lng: -118.21113612698262,
+    },
+    contact: {
+      phone: "8189492400",
+      formattedPhone: "(818) 949-2400",
+      twitter: "descansogardens",
+    },
+    location: {
+      address: "1418 Descanso Dr",
+      crossStreet: "Verdugo Boulevard",
+      lat: 34.20151270282765,
+      lng: -118.2116885788801,
+      labeledLatLngs: [
+        {
+          label: "display",
+          lat: 34.20151270282765,
+          lng: -118.2116885788801,
+        },
+      ],
+      postalCode: "91011",
+      cc: "US",
+      city: "La Cañada Flintridge",
+      state: "CA",
+      country: "United States",
+      formattedAddress: [
+        "1418 Descanso Dr (Verdugo Boulevard)",
+        "La Cañada Flintridge, CA 91011",
+        "United States",
+      ],
+    },
+    bestPhoto: {
+      id: "517eb6dae4b0ca597cbb6011",
+      createdAt: 1367258842,
+      source: {
+        name: "Foursquare for Android",
+        url: "https://foursquare.com/download/#/android",
+      },
+      prefix: "https://fastly.4sqi.net/img/general/",
+      suffix: "/4731718_AOc7J9x4EiB3YdCWtI2aIdiBNnX2IeDcacJlMs22EfA.jpg",
+      width: 960,
+      height: 720,
+      visibility: "public",
+    },
+    defaultHours: {
+      status: "Likely open",
+      richStatus: {
+        entities: [],
+        text: "Likely open",
+      },
+      isOpen: true,
+      isLocalHoliday: false,
+      timeframes: [
+        {
+          days: "Mon-Sun",
+          open: [
+            {
+              renderedTime: "11:00 AM–5:00 PM",
+            },
+          ],
+          segments: [],
+        },
+      ],
     },
   },
   {
@@ -47,6 +330,68 @@
       lat: 45.52312944379007,
       lng: -122.6700614730174,
     },
+    contact: {
+      phone: "5032244400",
+      formattedPhone: "(503) 224-4400",
+    },
+    location: {
+      address: "Naito Pkwy",
+      crossStreet: "btwn SW Harrison & NW Glisan",
+      lat: 45.52063136467168,
+      lng: -122.67029285430908,
+      labeledLatLngs: [
+        {
+          label: "display",
+          lat: 45.52063136467168,
+          lng: -122.67029285430908,
+        },
+      ],
+      postalCode: "97204",
+      cc: "US",
+      city: "Portland",
+      state: "OR",
+      country: "United States",
+      formattedAddress: [
+        "Naito Pkwy (btwn SW Harrison & NW Glisan)",
+        "Portland, OR 97204",
+        "United States",
+      ],
+    },
+    bestPhoto: {
+      id: "516444b2e4b063c6eec7326c",
+      createdAt: 1365525682,
+      source: {
+        name: "Foursquare for iOS",
+        url: "https://foursquare.com/download/#/iphone",
+      },
+      prefix: "https://fastly.4sqi.net/img/general/",
+      suffix: "/122865_c-XCEn6VDPP3MUrnD1h7FmJG_KzhAn1J7wFggOywPgQ.jpg",
+      width: 960,
+      height: 720,
+      visibility: "public",
+    },
+    defaultHours: {
+      status: "Open until Midnight",
+      richStatus: {
+        entities: [],
+        text: "Open until Midnight",
+      },
+      isOpen: true,
+      isLocalHoliday: false,
+      dayData: [],
+      timeframes: [
+        {
+          days: "Mon–Sun",
+          includesToday: true,
+          open: [
+            {
+              renderedTime: "5:00 AM–Midnight",
+            },
+          ],
+          segments: [],
+        },
+      ],
+    },
   },
   {
     title: "Dallas Arboretum and Botanical Garden, TX",
@@ -54,6 +399,68 @@
     latlng: {
       lat: 33.38805546984862,
       lng: -96.94264340913702,
+    },
+    contact: {
+      phone: "2145156500",
+      formattedPhone: "(214) 515-6500",
+    },
+    location: {
+      address: "8525 Garland Rd",
+      crossStreet: "at Whittier Ave.",
+      lat: 32.821399832347964,
+      lng: -96.71798822737732,
+      labeledLatLngs: [
+        {
+          label: "display",
+          lat: 32.821399832347964,
+          lng: -96.71798822737732,
+        },
+      ],
+      postalCode: "75218",
+      cc: "US",
+      city: "Dallas",
+      state: "TX",
+      country: "United States",
+      formattedAddress: [
+        "8525 Garland Rd (at Whittier Ave.)",
+        "Dallas, TX 75218",
+        "United States",
+      ],
+    },
+    bestPhoto: {
+      id: "5145f7bee4b0df0d795a4607",
+      createdAt: 1363539902,
+      source: {
+        name: "Instagram",
+        url: "http://instagram.com",
+      },
+      prefix: "https://fastly.4sqi.net/img/general/",
+      suffix: "/521856_zYHm4rhzGibErw_zOM75-VCXnbOdD-AiIWNlsdGp_LQ.jpg",
+      width: 612,
+      height: 612,
+      visibility: "public",
+    },
+    defaultHours: {
+      status: "Open until 5:00 PM",
+      richStatus: {
+        entities: [],
+        text: "Open until 5:00 PM",
+      },
+      isOpen: true,
+      isLocalHoliday: false,
+      dayData: [],
+      timeframes: [
+        {
+          days: "Mon–Sun",
+          includesToday: true,
+          open: [
+            {
+              renderedTime: "9:00 AM–5:00 PM",
+            },
+          ],
+          segments: [],
+        },
+      ],
     },
   },
 ]
