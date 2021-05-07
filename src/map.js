@@ -59,6 +59,7 @@ const mapInit = (apiKey, locations) => {
   const center = { lat: 38.747935611941074, lng: -98.54793617885777 };
   const zoom = 4;
   const mapID = 'a6ea77d474c830a3';
+  const icon = "https://image.flaticon.com/icons/png/32/4388/4388647.png";
 
   const loader = new Loader({
     apiKey: apiKey,
@@ -101,6 +102,7 @@ const mapInit = (apiKey, locations) => {
       locations.forEach((location) => {
         const marker = new google.maps.Marker({
           map,
+          icon: icon,
           animation: google.maps.Animation.DROP,
           position: location.latlng,
         });
