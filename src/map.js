@@ -4,16 +4,15 @@ import { Loader } from '@googlemaps/js-api-loader';
  inspired by:
  https://developers.google.com/maps/documentation/javascript/examples/programmatic-load-button#maps_programmatic_load_button-javascript 
  */
- function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("map").style.marginLeft = "250px";
+function openNav() {
+  document.getElementById('mySidenav').style.width = '16rem';
+  document.getElementById('map').style.marginLeft = '7rem';
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0px";
-  document.getElementById("map").style.marginLeft= "0px";
+  document.getElementById('mySidenav').style.width = '0rem';
+  document.getElementById('map').style.marginLeft = '0rem';
 }
-
 
 const creatWindowContent = (location) => {
   let html;
@@ -28,38 +27,37 @@ const creatWindowContent = (location) => {
     html += `<p>${location.contact.formattedPhone}</p>`;
   }
 
-  if(location?.location?.formattedAddress) {
+  if (location?.location?.formattedAddress) {
     html += `<p>${location.location.formattedAddress[0]}</p>`;
     html += `<p>${location.location.formattedAddress[1]}</p>`;
     html += `<p>${location.location.formattedAddress[2]}</p>`;
   }
 
-  if(location?.defaultHours?.timeframes) {
+  if (location?.defaultHours?.timeframes) {
     html += `<p>${location.defaultHours.timeframes[0].days}</p>`;
     for (let i = 0; i < location.defaultHours.timeframes[0].open.length; i++) {
       html += `<p>${location.defaultHours.timeframes[0].open[i].renderedTime}</p>`;
     }
-    
   }
-  
+
   return html;
 };
 
 const mapInit = (apiKey, locations) => {
   const menu = document.querySelector('.menu');
-  
+
   const close = document.querySelector('.closebtn');
   const open = document.querySelector('#open');
   close.addEventListener('click', closeNav);
   open.addEventListener('click', openNav);
 
-  // make map 
+  // make map
   let map;
   // const center = { lat: 41.90476224706472, lng: 12.49822074385094 };
   const center = { lat: 38.747935611941074, lng: -98.54793617885777 };
-  const zoom = 4;
+  const zoom = 4.2;
   const mapID = 'a6ea77d474c830a3';
-  const icon = "https://image.flaticon.com/icons/png/32/4388/4388647.png";
+  const icon = 'https://image.flaticon.com/icons/png/32/4388/4388647.png';
 
   const loader = new Loader({
     apiKey: apiKey,
@@ -120,7 +118,6 @@ const mapInit = (apiKey, locations) => {
           infowindow.open(map, marker);
         });
 
-        
         const li = document.createElement('li');
         li.innerText = location.title;
         ul.appendChild(li);
@@ -128,9 +125,8 @@ const mapInit = (apiKey, locations) => {
         li.addEventListener('click', () => {
           infowindow.setContent(creatWindowContent(location));
           infowindow.open(map, marker);
+          marker.setAnimation(google.maps.Animation.BOUNCE);
         });
-        
-
       });
     });
   });

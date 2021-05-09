@@ -19,7 +19,7 @@ exports.handler = async (event) => {
     .then((response) => response.text())
     .then((result) => {
       const data = JSON.parse(result);
-      console.log(data.response);
+      // console.log(data.response);
       return data;
     }
       

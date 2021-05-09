@@ -32,6 +32,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: azure;
+  align-items: center;
 }
 
 #wrapper {
@@ -51,8 +52,9 @@ body {
 }
 
 .menu {
-  padding: 5px;
+  padding: 2rem;
   display: none;
+  align-self: start;
 }
 
 .sidenav {
@@ -62,34 +64,48 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #d9f2da;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 3.75rem;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 1.6rem;
+  color: black;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #818181;
 }
 
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  right: 1.6rem;
+  font-size: 2.25rem;
+  margin-left: 3.125rem;
 }
 
 li {
-  color: white;
+  color: black;
+  font-size: 1rem;
+  padding: 2rem 1rem;
 }
 
+li:hover {
+  color: #818181;
+}
+
+#open {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#open:hover {
+  color: #818181;
+}
