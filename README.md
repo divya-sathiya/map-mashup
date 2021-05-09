@@ -21,7 +21,7 @@ In addition to the markers, there are lists of the locations on the side of the 
 
 ## Using Cherry Blossom Icon
 
-[Icon made by iconixar](https://www.flaticon.com/packs/spring-296)
+![Cherry Blossom Icon](https://image.flaticon.com/icons/png/32/4388/4388647.png)[Icon made by iconixar](https://www.flaticon.com/packs/spring-296)
 
 ## Team Members
 
