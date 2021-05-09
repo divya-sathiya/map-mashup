@@ -11,15 +11,12 @@ exports.handler = async (event) => {
     redirect: 'follow',
   };
 
- 
-
   for (i=0; i < locations.length; i++) {
     const apiSearch = `https://api.foursquare.com/v2/venues/${locations[i].id}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=20190425`;
     const locationData = await fetch( apiSearch,requestOptions)
     .then((response) => response.text())
     .then((result) => {
       const data = JSON.parse(result);
-      // console.log(data.response);
       return data;
     }
       
@@ -32,7 +29,6 @@ exports.handler = async (event) => {
         body: JSON.stringify(locations),
       };
     });
-    // console.log({locationData})
     locations[i].contact = locationData.response.venue.contact;
     locations[i].location = locationData.response.venue.location;
     locations[i].bestPhoto = locationData.response.venue.bestPhoto;

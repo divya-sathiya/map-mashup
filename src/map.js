@@ -4,16 +4,19 @@ import { Loader } from '@googlemaps/js-api-loader';
  inspired by:
  https://developers.google.com/maps/documentation/javascript/examples/programmatic-load-button#maps_programmatic_load_button-javascript 
  */
+// open button for the list
 function openNav() {
   document.getElementById('mySidenav').style.width = '16rem';
   document.getElementById('map').style.marginLeft = '7rem';
 }
 
+// close button for the list
 function closeNav() {
   document.getElementById('mySidenav').style.width = '0rem';
   document.getElementById('map').style.marginLeft = '0rem';
 }
 
+// get photo for each location
 const creatWindowContent = (location) => {
   let html;
   const prefix = location.bestPhoto.prefix;
@@ -23,16 +26,19 @@ const creatWindowContent = (location) => {
   html = `<img src = "${url}" alt = "a pretty photo">
   <p>${location.title}</p>`;
 
+  // get each location's phone number
   if (location?.contact?.formattedPhone) {
     html += `<p>${location.contact.formattedPhone}</p>`;
   }
 
+  // get each location's address
   if (location?.location?.formattedAddress) {
     html += `<p>${location.location.formattedAddress[0]}</p>`;
     html += `<p>${location.location.formattedAddress[1]}</p>`;
     html += `<p>${location.location.formattedAddress[2]}</p>`;
   }
 
+  // get each location's operating hours
   if (location?.defaultHours?.timeframes) {
     html += `<p>${location.defaultHours.timeframes[0].days}</p>`;
     for (let i = 0; i < location.defaultHours.timeframes[0].open.length; i++) {
@@ -45,7 +51,6 @@ const creatWindowContent = (location) => {
 
 const mapInit = (apiKey, locations) => {
   const menu = document.querySelector('.menu');
-
   const close = document.querySelector('.closebtn');
   const open = document.querySelector('#open');
   close.addEventListener('click', closeNav);
@@ -53,7 +58,6 @@ const mapInit = (apiKey, locations) => {
 
   // make map
   let map;
-  // const center = { lat: 41.90476224706472, lng: 12.49822074385094 };
   const center = { lat: 38.747935611941074, lng: -98.54793617885777 };
   const zoom = 4.2;
   const mapID = 'a6ea77d474c830a3';
@@ -74,29 +78,18 @@ const mapInit = (apiKey, locations) => {
     menu.style.display = 'block';
     wrapper.remove();
     loader.load().then(() => {
-      // mapOptions is an object that gets passed to the
-      // google.maps.Map() method to create a new map
-      //
-      // There are two required options for every map: center and zoom.
-      // Research what other options can be added and experiment
-      // with them to change your map
 
       const mapOptions = {
         center: center,
         zoom: zoom,
-        // put additional options here
-        // styles: styles,
         mapId: mapID,
       };
 
       map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-      // Put additional map google code here
-      // Put markers on the map and assign an infowindow to
-      // each
       const infowindow = new google.maps.InfoWindow({});
       const ul = document.querySelector('#list');
 
+      // create marker for each location
       locations.forEach((location) => {
         const marker = new google.maps.Marker({
           map,
@@ -106,6 +99,7 @@ const mapInit = (apiKey, locations) => {
         });
         marker.addListener('click', toggleBounce);
 
+        // make marker bounce
         function toggleBounce() {
           marker.setAnimation(google.maps.Animation.BOUNCE);
           setTimeout(() => {
@@ -113,19 +107,25 @@ const mapInit = (apiKey, locations) => {
           }, 3000);
         }
 
+        // open location's info window when clicked
         marker.addListener('click', () => {
           infowindow.setContent(creatWindowContent(location));
           infowindow.open(map, marker);
         });
 
+        // display each location's title in the list
         const li = document.createElement('li');
         li.innerText = location.title;
         ul.appendChild(li);
 
+        // open the location's info window when the location is clicked on the list
         li.addEventListener('click', () => {
           infowindow.setContent(creatWindowContent(location));
           infowindow.open(map, marker);
           marker.setAnimation(google.maps.Animation.BOUNCE);
+          setTimeout(() => {
+            marker.setAnimation(null);
+          }, 3000);
         });
       });
     });

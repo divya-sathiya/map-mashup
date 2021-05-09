@@ -1,7 +1,5 @@
 import './style.css';
 import { mapInit } from './map';
-
-//import styles from './map-styles.json5';
 import locations from './locations.json5';
 
 const getApi = async () => {
