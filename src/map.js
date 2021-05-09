@@ -125,6 +125,7 @@ const mapInit = (apiKey, locations) => {
         li.addEventListener('click', () => {
           infowindow.setContent(creatWindowContent(location));
           infowindow.open(map, marker);
+          marker.setAnimation(google.maps.Animation.BOUNCE);
         });
       });
     });
