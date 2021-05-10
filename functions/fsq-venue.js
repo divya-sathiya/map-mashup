@@ -11,7 +11,10 @@ exports.handler = async (event) => {
     redirect: 'follow',
   };
 
+  // Create a for loop that retrieves data from FourSquare
+  // and returns the contact, location, and bestPhoto of the user's desired location (out of what is available on the map)
   for (i=0; i < locations.length; i++) {
+    // apiSearch uses CLIENT_ID and CLIENT_SECRET in order to retrieve data from FourSquare
     const apiSearch = `https://api.foursquare.com/v2/venues/${locations[i].id}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}&v=20190425`;
     const locationData = await fetch( apiSearch,requestOptions)
     .then((response) => response.text())
@@ -21,6 +24,7 @@ exports.handler = async (event) => {
     }
       
     )
+    // If an error occurs, return a message warning the user of the error
     .catch((err) =>{
       console.error('Error retreiving data from FourSquare');
       console.error(err);
@@ -29,8 +33,11 @@ exports.handler = async (event) => {
         body: JSON.stringify(locations),
       };
     });
+    // Retrieve contact data (i.e: phone number)
     locations[i].contact = locationData.response.venue.contact;
+    // Retrieve location data (i.e: address)
     locations[i].location = locationData.response.venue.location;
+    // Retrieve bestPhoto data (most popular photo among tourists according to FourSquare)
     locations[i].bestPhoto = locationData.response.venue.bestPhoto;
   }
 
