@@ -8,7 +8,7 @@ An application that allows users to look at popular cherry blossom parks in the 
     - HTML
     - CSS
     - Google Maps API
-    - [Foursquare Places API](https://developer.foursquare.com/)
+    - Foursquare Places API
 
 ## Description
 
